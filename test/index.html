@@ -1,56 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sports Betting Data Display</title>
+    <title>NFL Betting Odds</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .betting-info { margin-bottom: 20px; }
-        .bookmaker { margin-left: 20px; }
-        .market { margin-left: 40px; }
-    </style>
 </head>
 <body>
-    <h1>Sports Betting Data</h1>
+    <h1>NFL Betting Odds</h1>
     <div id="data-container">
     </div>
 
-    <script>
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('data-container');
-
-                data.forEach(event => {
-                    let eventInfo = document.createElement('div');
-                    eventInfo.className = 'betting-info';
-                    eventInfo.innerHTML = `<strong>${event.sport_title}</strong> (${event.commence_time}): ${event.home_team} vs ${event.away_team}<br>`;
-
-                    event.bookmakers.forEach(bookmaker => {
-                        let bookmakerInfo = document.createElement('div');
-                        bookmakerInfo.className = 'bookmaker';
-                        bookmakerInfo.innerHTML = `<strong>${bookmaker.title}</strong> (Last update: ${bookmaker.last_update})`;
-
-                        bookmaker.markets.forEach(market => {
-                            let marketInfo = document.createElement('div');
-                            marketInfo.className = 'market';
-                            marketInfo.innerHTML = `<strong>${market.key}</strong> (Last update: ${market.last_update})`;
-
-                            market.outcomes.forEach(outcome => {
-                                let outcomeInfo = document.createElement('div');
-                                outcomeInfo.innerHTML = `- ${outcome.name}: Price ${outcome.price}${outcome.point ? ', Point ' + outcome.point : ''}`;
-                                marketInfo.appendChild(outcomeInfo);
-                            });
-
-                            bookmakerInfo.appendChild(marketInfo);
-                        });
-
-                        eventInfo.appendChild(bookmakerInfo);
-                    });
-
-                    container.appendChild(eventInfo);
-                });
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
