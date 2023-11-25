@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('data.json')
+    fetch('data/nfl-data.json')
     .then(response => response.json())
     .then(data => {
         const container = document.getElementById('data-container');
@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function getTeamLogo(team) {
-    return `logos/${team.toLowerCase().replace(/\s/g, '-')}.png`;
+    return `../logos/${team.toLowerCase().replace(/\s/g, '-')}.png`;
 }
 
