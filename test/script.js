@@ -1,4 +1,5 @@
-fetch('data.json')
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('data.json')
     .then(response => response.json())
     .then(data => {
         const container = document.getElementById('data-container');
@@ -8,7 +9,7 @@ fetch('data.json')
             gameInfo.className = 'game-info';
 
             const teams = document.createElement('h2');
-            teams.textContent = `${game.home_team} vs ${game.away_team}`;
+            teams.innerHTML = `<img src="${getTeamLogo(game.home_team)}" alt="${game.home_team}"> ${game.home_team} vs <img src="${getTeamLogo(game.away_team)}" alt="${game.away_team}"> ${game.away_team}`;
             gameInfo.appendChild(teams);
 
             const gameTime = new Date(game.commence_time).toLocaleString();
@@ -34,4 +35,10 @@ fetch('data.json')
         });
     })
     .catch(error => console.error('Error fetching JSON:', error));
+});
+
+
+function getTeamLogo(team) {
+    return `logos/${team.toLowerCase().replace(/\s/g, '-')}.png`;
+}
 
