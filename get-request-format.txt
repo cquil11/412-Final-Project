@@ -1,0 +1,7 @@
+https://api.the-odds-api.com/v4/sports/upcoming/odds/?oddsFormat=american&sport=americanfootball_nfl&bookmakers=draftkings&markets=h2h,spreads,totals&apiKey=24f6106a7dfd9ee1793734b24ced15b5
+
+Draft Kings
+American Football
+	Spread
+	Moneyline
+	Over/Under
