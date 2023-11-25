@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+}
+
+#data-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.betting-info {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.bookmaker {
+    margin-left: 20px;
+    color: #0077cc;
+}
+
+.market {
+    margin-left: 40px;
+    color: #d35400;
+}
+
+.betting-info:last-child {
+    border-bottom: none;
+}
+
