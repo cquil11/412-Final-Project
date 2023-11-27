@@ -86,3 +86,13 @@ h2 img {
 h1 {
     text-align: center;
 }
+
+#nba-logo-icon {
+    max-width: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
