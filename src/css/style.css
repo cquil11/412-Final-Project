@@ -1,4 +1,5 @@
 body {
+    padding-top: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     background-color: #f7f7f7;
@@ -96,3 +97,43 @@ h1 {
     top: 0px;
     left: 0px;
 }
+
+.top-nav {
+    background-color: #16418c;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    width: 100%; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav ul li {
+    flex-grow: 1; /* Each item can grow to fill available space */
+    text-align: center; /* Center the text within each item */
+}
+
+.top-nav ul li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.top-nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
