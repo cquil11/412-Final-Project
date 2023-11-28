@@ -1,10 +1,17 @@
 [
     {
         "timestamp": "11/27/2023 20:45:12",
-        "notableBets": "I made a bet!"
+        "notableBets": "I made a bet!",
+        "username": "quilicam"
     },
     {
         "timestamp": "11/27/2023 20:45:12",
-        "notableBets": "I made another bet!"
+        "notableBets": "I made another bet!",
+        "username": "bigdog222"
+    },
+    {
+        "timestamp": "11/27/2023 20:45:12",
+        "notableBets": "I made another, nother bet!!!",
+        "username": "user244"
     }
 ]
