@@ -120,8 +120,8 @@ h1 {
 }
 
 .top-nav ul li {
-    flex-grow: 1; /* Each item can grow to fill available space */
-    text-align: center; /* Center the text within each item */
+    flex-grow: 1;
+    text-align: center; 
 }
 
 .top-nav ul li a {
@@ -129,11 +129,60 @@ h1 {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s;
 }
 
 .top-nav ul li a:hover {
     background-color: #ddd;
     color: black;
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; 
+    margin-bottom: 20px;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 640px; 
+    margin-bottom: 20px; 
+}
+
+.bets-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bet-info {
+    box-sizing: border-box;
+    width: 640px; 
+    margin: 10px 0;
+    padding: 15px;
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bet-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.bet-info p, .bet-info strong {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+
 
